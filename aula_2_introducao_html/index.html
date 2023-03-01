@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 2 Des Web</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #ececec;
+        }
+        h1{
+            text-align: center;
+            margin-top: 50px;
+        }
+        .formulario{
+            width: 500px;
+            padding: 10px;
+            margin: 0 auto;
+            border: 1px solid #dfdddd;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px #0000005a;
+            background-color: #ffffff;
+
+        }
+        label{
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="number"]{
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            padding: 5px;
+            border: 1px solid #dfdddd;
+        }
+        button{
+            width: 100%;
+            background-color: #5cb85c;
+            border: none;
+            font-size: 16px;
+            padding: 5px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        #resultado{
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora de IMC</h1>
+    <div class="formulario">
+        <label>Altura</label>
+        <input type="number" id="altura"/>
+        <label>Peso</label>
+        <input type="number" id="peso"/>
+        <button onclick="calcular()">Calcular</button>
+
+        <div id="resultado">
+    
+        </div>
+    </div>
+<script>
+    function calcular(){
+        var altura = document.getElementById("altura").value;
+        var peso = document.getElementById("peso").value;
+        var resultado;
+        if(altura > 0 && peso > 0){
+            resultado = (peso/(altura * altura)).toFixed(2);
+        }else{
+            resultado = "Informe o peso e a altura";
+        }
+        var divResultado = document.getElementById("resultado");
+        divResultado.innerHTML = resultado;
+    }
+</script>
+</body>
+</html>

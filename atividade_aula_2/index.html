@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Recibos</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input{
+            margin-top: 5px;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        label{
+            margin-top: 10px;
+        }
+        .medium-input{
+            width: 30%;
+        }
+        .large-input{
+            width: 100%;
+        }
+        .solo-label{
+            display: block;
+        }
+        .div-principal{
+            width: 60%;
+        }
+    </style>
+</head>
+<body>
+    <div class="div-principal">
+        <h1>Recibo de Pagamento</h1>
+        <label class="solo-label">valor:</label>
+        <input type="number">
+        <p>valor recebido</p>
+        <label class="solo-label">Nome do Pagador</label>
+        <input class="large-input" type="text">
+        <label class="solo-label">CPF ou CNPJ (opcional):</label>
+        <input type="text">
+        <p>Somente números</p>
+        <label class="solo-label">Referente à:</label>
+        <input class="large-input" type="text">
+        <label>Cidade:</label>
+        <label>Data:</label>
+        <input class="medium-input" type="text">
+        <input class="medium-input" type="text">
+        <label class="solo-label">Nome do Emissor:</label>
+        <input class="large-input" type="text">
+        <label>Telefone: (opcional):</label>
+        <label>CPF ou CNPJ (opcional):</label>
+        <label class="solo-label">Observações:</label>
+        <input type="text">
+        <button>Gerar Recibo</button>
+
+    </div>
+</body>
+</html>
